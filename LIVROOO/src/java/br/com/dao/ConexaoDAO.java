@@ -1,6 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Conexão com o banco de dados
  */
 package br.com.dao;
 
@@ -13,7 +12,7 @@ public class ConexaoDAO {
         Connection con = null;
         try{
             
-            
+            //Lembrando que em "jdbc:mysql://localhost:3306/biblioteca?user=root&password="; a palavra biblioteca tem que ser o nome do banco de dados
             String url = "jdbc:mysql://localhost:3306/biblioteca?user=root&password=";
             Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection(url);
