@@ -20,7 +20,7 @@ public class ConexaoDAO {
               System.out.print("AI PAPAI");
         }
         catch(SQLException e ){
-            System.out.println("SEXOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+            
             System.out.println("Erro ao estabelecer a conexão com o banco de dados:");
             System.out.println("Mensagem: " + e.getMessage());
             System.out.println("Código de erro: " + e.getErrorCode());
