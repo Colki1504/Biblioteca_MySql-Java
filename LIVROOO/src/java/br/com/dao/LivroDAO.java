@@ -1,6 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Local onde tem as classes para os comandos slq
  */
 package br.com.dao;
 
@@ -11,17 +10,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 public class LivroDAO {
+     /*Variaveis */
     Connection con;
     PreparedStatement pstm;
     ResultSet  rs;
     ArrayList<livrodto> lista = new ArrayList<>();
+     /*Variaveis */
+     /*Classe cadastrar livro */
     public void CadastrarLivro(livrodto li) throws ClassNotFoundException{
-        
+     
         String nome_livro= li.nome;
         String autor_livro= li.autor;
         String valor_livro= li.valor;
         String sql = "insert into livro(nome_livro,autor_livro,valor_livro) values(?,?,?)";
-        
+    
         con = new ConexaoDAO().conexao();
         try{
             pstm = con.prepareCall(sql);
@@ -44,7 +46,7 @@ public class LivroDAO {
         }
         
     }
-    
+     /*Classe para pesquisar livros */
     public ArrayList<livrodto> PesquisarLivro() throws ClassNotFoundException{
             
         String sql = "select * from livro";
@@ -95,7 +97,7 @@ public class LivroDAO {
             System.out.println("Estado SQL: " + e.getSQLState());
         }
     }
-    
+     /*Classe para alterar o nome dos livros */
     public void AlterarLivro(livrodto li) throws ClassNotFoundException{
         
         String sql = "update livro set nome_livro= ? where id_livro= ?";
@@ -105,11 +107,6 @@ public class LivroDAO {
             pstm = con.prepareCall(sql);
             pstm.setString(1, li.nome );
             pstm.setInt(2, li.id_livro);
-
-            
-            
-            
-
             pstm.execute();
             pstm.close();
         }
