@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Mundo das Letras</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>
+        
+        <div class="FundoNav">
+            <div class="NavItens">
+            <img src="img/livro.png" width="50px" height="50px">
+            <h1>Mundo das Letras</h1>
+            </div>
+                <nav>   
+                <ul> 
+                    <li><a href="#">Inserir</a></li>
+                    <li><a href="jsp/pesquisar.jsp">Pesquisar</a></li>
+                    <li><a href="jsp/excluir.jsp">Excluir</a></li>
+                    <li><a href="jsp/alterar.jsp">Alterar</a></li>
+                </ul> 
+                </nav>
+        </div>
+        <div class="formsP">
+        <p>
+            Bem-vindo ao "Mundo das Letras", um lugar mágico onde as palavras ganham 
+            vida e os livros são portais para aventuras sem fim. Aqui, mergulhe em um 
+            universo repleto de conhecimento, imaginação e descobertas.<br>
+            Que tal adicionar seu proprio livro?
+        </p>
+        <img src="./img/29302.png" height="100px">
+        </div>
+        <header>
+                   
+            <div class="forms">
+                <form action="./jsp/insert.jsp"  method="POST">
+                    <div class="form">
+                        <label>Adicionar seu Livro</label><br>
+                        <label>Nome do livro:</label> 
+                        <input type="text" name="nome"> <br/>
+                        <label>Autor do livro:  </label>
+                        <input type="text" name="autor"> <br/>
+                        <label>Valor do livro: </label>
+                        <input type="text" name="valor"> <br/>
+                        <br>
+                        
+                        <button type="submit">cadastrar</button>
+
+                        <br>
+                        
+                    </div>
+                </form>
+            </div>    
+        </header>
+    </body> 
+
+</html>
